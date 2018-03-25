@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+li {
+  background: lightgray;
+  width:100%;
+  margin: 5px;
+  padding:5px;
+}
+
+.container{
+width: 680px;
+opacity: 0.8;
+
+}
+
+h1,h2,h3,h4{
+  color:#999 !important;
+  
+}
+
+body{
+color:#999 !important;
+  background-image: url('assets/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-attachment: fixed;
+  background-size: cover;
+
+} 
+
+p {
+  padding:30px;
+  text-align: center;
+} 
+
+.fa i:hover{
+ 
+  color:#4fca23;
+
+}
+.fa{
+  cursor: pointer;
+}

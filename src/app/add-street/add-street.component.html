@@ -1,0 +1,21 @@
+<div>
+  <h4>Hey! Put the street name<br>and description here!</h4>
+  <div class="form-group row">
+      <label for="example-text-input" class="col-12 col-form-label">Street name</label>
+      <div class="col-12">
+          <input [(ngModel)]="newStreet" class="form-control" >
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-search-input" class="col-12 col-form-label">Description</label>
+      <div class="col-12">
+          <textarea [(ngModel)]="newDescription"  class="form-control"></textarea>
+      </div>
+    </div> 
+    <div class="form-group row">      
+        <div class="col-12">
+            <button (click)="add()" class="btn btn-primary">Submit new street</button>
+        </div>
+      </div>
+</div>
+

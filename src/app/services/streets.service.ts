@@ -34,12 +34,6 @@ export class StreetsService {
     if (isVisible) document.getElementById(''+street.id+'').style.display="none";
   }
 
-  edit(street: Street) {
-    const isVisible = document.getElementById(''+street.id+'').style.display == "block";
-    document.getElementById(''+street.id+'').style.display="block";
-    if (isVisible) document.getElementById(''+street.id+'').style.display="none";
-  }
-
 
   getStreetsListObs(): Observable<Array<Street>> {
     return this.streetsListObs.asObservable();

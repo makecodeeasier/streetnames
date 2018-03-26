@@ -48,9 +48,6 @@ export class StreetsComponent implements OnInit {
   }
 
 
-  edit(street: Street) {
-    this.streetsService.edit(street);
-  }
 
 
   details(street: Street) {

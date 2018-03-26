@@ -1,5 +1,5 @@
-<ng-container *ngIf="streetsList.length > 0; else noStreet" style="width:500px">
-  <p  >Ilość ulic dostępnych na liście: {{streetsList.length}}</p>
+<ng-container *ngIf="streetsList.length > 0; else noStreet" style="max-width:520px">
+  <p  >You have {{streetsList.length}} street names on list.</p>
   <ul>
     <ng-container *ngFor="let street of streetsList; let odd = odd">
     <li  style="color:#000"  [ngClass]="{'odd-li': odd, 'last-li': streetsList.length===1 }">
@@ -14,7 +14,7 @@
       <div style="clear:both"></div>
      
       </li>
-      <div style="width:100%; display:none" id={{street.id}} >
+      <div style="display:none" id={{street.id}} >
         <app-description [desc]=street.description></app-description>
         </div>
   </ng-container>
@@ -23,7 +23,7 @@
   
 </ng-container>
 <ng-template #noStreet>
-  <p >Brakuje nazw ulic na liście. Dodaj nową nazwę ulicy!</p>
+  <p >Oh no! There is no items on the list.</p>
 </ng-template>
 
  

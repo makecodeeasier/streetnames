@@ -2,7 +2,6 @@ import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } fro
 import { StreetsService } from '../services/streets.service';
 import { Street } from '../models/street';
 import { Http } from "@angular/http";
-
  
 
 
@@ -12,11 +11,12 @@ import { Http } from "@angular/http";
   styleUrls: ['./streets.component.css']
 })
 export class StreetsComponent implements OnInit {
+ 
   private data;
    streetsList: Array<Street> = [];
 
   constructor(private streetsService: StreetsService, private http: Http) {
-    console.log('TodoTaskComponent');
+   
     this.streetsService.getStreetsListObs().subscribe((streets: Array<Street>) => {
       this.streetsList = streets;
     });
@@ -26,7 +26,7 @@ export class StreetsComponent implements OnInit {
 
 
 
-    this.http.get("http://dev.itsense.pl/adgroup/streets.php")
+    this.http.get("http://dev.itsense.pl/adgroup/streets.php?rand=" + Date())
       .subscribe((data) => {
  
           this.data = data.json();
@@ -41,11 +41,17 @@ export class StreetsComponent implements OnInit {
      });
 
 
-  }
+  } 
 
   remove(street: Street) {
     this.streetsService.remove(street);
   }
+
+
+  edit(street: Street) {
+    this.streetsService.edit(street);
+  }
+
 
   details(street: Street) {
 

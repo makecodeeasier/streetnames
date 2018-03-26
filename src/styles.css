@@ -6,8 +6,13 @@ li {
   padding:5px;
 }
 
+ul{
+  list-style: none;
+  padding: 0px;
+}
+
 .container{
-width: 680px;
+ 
 opacity: 0.8;
 
 }
